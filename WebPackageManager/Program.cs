@@ -26,7 +26,7 @@ namespace WebPackageManager
                     Console.WriteLine(String.Format("Endereço: {0}", pedido.Endereco)); 
                     foreach(ServicoCompras.Produto prod in pedido.Produtos)
                     {
-                        Console.WriteLine(String.Format(" => {0} - {0}", prod.Nome, prod.Quantidade));
+                        Console.WriteLine(String.Format(" => {0} - {1}", prod.Nome, prod.Quantidade));
                     }
 
                     //Imprime o identificador da mensagem
