@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicoGerenciadorProdutos" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:59253/ServicoGerenciadorProdutos.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:59253/ServicoGerenciadorProdutos.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:59253/ServicoGerenciadorProdutos.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GerenciadorProdutosWCF" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicoGerenciadorProdutos_AdicionarProduto_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdicionarProduto" />
+  </wsdl:message>
+  <wsdl:message name="IServicoGerenciadorProdutos_AdicionarProduto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdicionarProdutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicoGerenciadorProdutos_EditarProduto_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditarProduto" />
+  </wsdl:message>
+  <wsdl:message name="IServicoGerenciadorProdutos_EditarProduto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditarProdutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicoGerenciadorProdutos_RemoverProduto_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoverProduto" />
+  </wsdl:message>
+  <wsdl:message name="IServicoGerenciadorProdutos_RemoverProduto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoverProdutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicoGerenciadorProdutos_ObterProdutos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterProdutos" />
+  </wsdl:message>
+  <wsdl:message name="IServicoGerenciadorProdutos_ObterProdutos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterProdutosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicoGerenciadorProdutos">
+    <wsdl:operation name="AdicionarProduto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicoGerenciadorProdutos/AdicionarProduto" message="tns:IServicoGerenciadorProdutos_AdicionarProduto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicoGerenciadorProdutos/AdicionarProdutoResponse" message="tns:IServicoGerenciadorProdutos_AdicionarProduto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditarProduto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicoGerenciadorProdutos/EditarProduto" message="tns:IServicoGerenciadorProdutos_EditarProduto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicoGerenciadorProdutos/EditarProdutoResponse" message="tns:IServicoGerenciadorProdutos_EditarProduto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoverProduto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicoGerenciadorProdutos/RemoverProduto" message="tns:IServicoGerenciadorProdutos_RemoverProduto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicoGerenciadorProdutos/RemoverProdutoResponse" message="tns:IServicoGerenciadorProdutos_RemoverProduto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterProdutos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicoGerenciadorProdutos/ObterProdutos" message="tns:IServicoGerenciadorProdutos_ObterProdutos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicoGerenciadorProdutos/ObterProdutosResponse" message="tns:IServicoGerenciadorProdutos_ObterProdutos_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicoGerenciadorProdutos" type="tns:IServicoGerenciadorProdutos">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AdicionarProduto">
+      <soap:operation soapAction="http://tempuri.org/IServicoGerenciadorProdutos/AdicionarProduto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarProduto">
+      <soap:operation soapAction="http://tempuri.org/IServicoGerenciadorProdutos/EditarProduto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoverProduto">
+      <soap:operation soapAction="http://tempuri.org/IServicoGerenciadorProdutos/RemoverProduto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterProdutos">
+      <soap:operation soapAction="http://tempuri.org/IServicoGerenciadorProdutos/ObterProdutos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicoGerenciadorProdutos">
+    <wsdl:port name="BasicHttpBinding_IServicoGerenciadorProdutos" binding="tns:BasicHttpBinding_IServicoGerenciadorProdutos">
+      <soap:address location="http://localhost:59253/ServicoGerenciadorProdutos.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

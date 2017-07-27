@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerenciadorComprasWCF", "GerenciadorComprasWCF\GerenciadorComprasWCF.csproj", "{7ED08D20-9C98-4538-9ADA-FB1BABAF075D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D4F5FDC0-3E1B-4756-8969-0567A6715C19} = {D4F5FDC0-3E1B-4756-8969-0567A6715C19}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerenciadorProdutosWCF", "GerenciadorProdutosWCF\GerenciadorProdutosWCF.csproj", "{D4F5FDC0-3E1B-4756-8969-0567A6715C19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStore", "WebStore\WebStore.csproj", "{3495EBAD-9140-4A1C-BDEB-9DA6160D7258}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7ED08D20-9C98-4538-9ADA-FB1BABAF075D} = {7ED08D20-9C98-4538-9ADA-FB1BABAF075D}
+		{D4F5FDC0-3E1B-4756-8969-0567A6715C19} = {D4F5FDC0-3E1B-4756-8969-0567A6715C19}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPackageManager", "GerenciadorPacotes\WebPackageManager.csproj", "{7171E155-CBFE-4279-A444-80B3F8857F9E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7ED08D20-9C98-4538-9ADA-FB1BABAF075D} = {7ED08D20-9C98-4538-9ADA-FB1BABAF075D}
+		{D4F5FDC0-3E1B-4756-8969-0567A6715C19} = {D4F5FDC0-3E1B-4756-8969-0567A6715C19}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7ED08D20-9C98-4538-9ADA-FB1BABAF075D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED08D20-9C98-4538-9ADA-FB1BABAF075D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED08D20-9C98-4538-9ADA-FB1BABAF075D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED08D20-9C98-4538-9ADA-FB1BABAF075D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4F5FDC0-3E1B-4756-8969-0567A6715C19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4F5FDC0-3E1B-4756-8969-0567A6715C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4F5FDC0-3E1B-4756-8969-0567A6715C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4F5FDC0-3E1B-4756-8969-0567A6715C19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3495EBAD-9140-4A1C-BDEB-9DA6160D7258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3495EBAD-9140-4A1C-BDEB-9DA6160D7258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3495EBAD-9140-4A1C-BDEB-9DA6160D7258}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3495EBAD-9140-4A1C-BDEB-9DA6160D7258}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7171E155-CBFE-4279-A444-80B3F8857F9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7171E155-CBFE-4279-A444-80B3F8857F9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7171E155-CBFE-4279-A444-80B3F8857F9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7171E155-CBFE-4279-A444-80B3F8857F9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
