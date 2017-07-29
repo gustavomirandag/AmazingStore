@@ -31,7 +31,29 @@ namespace GerenciadorComprasWCF
         }
         public bool EnviarPedido(Pedido pedido)
         {
-            
+            //=== Verificar se existe quantidade suficiente de produtos ===
+            ServicoProdutos.ServicoGerenciadorProdutosClient client = new ServicoGerenciadorProdutosClient();
+            client.Open();
+
+            //Percorrer todos os produtos que compoem o pedido
+            foreach (var produto in pedido.Produtos)
+            {
+                int qtdEmEstoque = client.ObterProdutos().Single(x => x.Nome == produto.Nome).Quantidade;
+
+                //A quantidade em estoque é ZERO?
+                //Caso positivo, remove o produto do PEDIDO
+
+                //Tenho quantidade suficiente no estoque?
+                //Caso positivo, tiro a quantidade do ESTOQUE
+
+                //Quantidade do pedido é maior do que a em estoque
+                //Remover todo o estoque e colocar no PEDIDO o que tinha em estoque.
+            }
+
+            client.Close();
+            //=============================================================
+
+
             var connectionString = "Endpoint=sb://amazingstore.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=hKghAcfKuLxZDktpawRoE7MKsafBUdg2OsPYeRHRTTQ=";
             var queueName = "amazingqueue";
 
