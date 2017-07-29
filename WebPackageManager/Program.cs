@@ -12,7 +12,7 @@ namespace WebPackageManager
     {
         static void Main(string[] args)
         {
-            var connectionString = "Endpoint=sb://amazingstore.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=MRF/41K8dKlXrzHN5LOci43oIowe4xGLYIXU0lrRUTI=";
+            var connectionString = "Endpoint=sb://amazingstore.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=hKghAcfKuLxZDktpawRoE7MKsafBUdg2OsPYeRHRTTQ=";
             var client = QueueClient.CreateFromConnectionString(connectionString, "amazingqueue");
             ManualResetEvent CompletedEvent = new ManualResetEvent(false);
 
