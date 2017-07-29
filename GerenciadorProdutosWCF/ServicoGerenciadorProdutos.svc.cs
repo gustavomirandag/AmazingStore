@@ -57,6 +57,7 @@ namespace GerenciadorProdutosWCF
             prod.Descricao = produto.Descricao;
             prod.Categoria = produto.Categoria;
             prod.Preco = produto.Preco;
+            prod.Quantidade = prod.Quantidade;
         }
 
         public List<Produto> ObterProdutos()
